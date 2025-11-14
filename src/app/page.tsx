@@ -3,8 +3,10 @@
 import React from 'react';
 import { Spotlight } from '@/components/ui/spotlight-new';
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip';
+import { AboutSection } from '@/components/ui/AboutSection';
+import { LogoTicker } from '@/components/ui/LogoTicker';
 
-export default function HeroSection() {
+function HeroSection() {
   return (
   <div className="h-screen w-full relative flex items-center justify-center overflow-hidden bg-black -mt-16">
       <video
@@ -52,7 +54,22 @@ export default function HeroSection() {
             Initialize System
           </button>
         </div>
+        
+        {/* Logo ticker appears inside the hero/video background */}
+        <div className="relative z-20 w-full">
+          <LogoTicker />
+        </div>
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <main>
+      <HeroSection />
+      <AboutSection />
+      {/* Other sections will go below */}
+    </main>
   );
 }
