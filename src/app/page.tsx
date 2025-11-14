@@ -5,6 +5,8 @@ import { Spotlight } from '@/components/ui/spotlight-new';
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip';
 import { AboutSection } from '@/components/ui/AboutSection';
 import { LogoTicker } from '@/components/ui/LogoTicker';
+import { FeaturesSection } from '@/components/ui/FeaturesSection';
+import { HighlightsSection } from '@/components/ui/HighlightsSection';
 
 function HeroSection() {
   return (
@@ -68,7 +70,9 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <AboutSection />
+  <AboutSection />
+  <FeaturesSection />
+  <HighlightsSection />
       {/* Other sections will go below */}
     </main>
   );
