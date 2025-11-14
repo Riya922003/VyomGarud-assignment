@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { cn } from "@/lib/utils";
 
@@ -40,11 +41,9 @@ const mockCards = [
 
 export const FeaturesSection = ({ className }: { className?: string }) => {
   return (
-    <section className={cn("w-full bg-neutral-900 py-20 px-4", className)}>
+    <section id="products" className={cn("w-full bg-neutral-900 py-20 px-4", className)}>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our ProductsThe class `bg-gradient-to-t` can be written as `bg-linear-to-t`
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Products</h2>
         <p className="text-neutral-400 mb-10 max-w-2xl">
           Advanced UAV platforms designed for resilient, mission-critical payload delivery and autonomous operations.
         </p>
@@ -55,12 +54,16 @@ export const FeaturesSection = ({ className }: { className?: string }) => {
             <CardSpotlight key={card.id} className="h-[520px] flex flex-col rounded-xl overflow-hidden">
               {/* Top image area (45%) */}
               <div className="h-[45%] rounded-md overflow-hidden bg-linear-to-tr from-neutral-800 via-neutral-900 to-black flex items-center justify-center">
-                {/* Use the provided drone.jpg from public/Images */}
-                <img
-                  src="/Images/drone.jpg"
-                  alt={`${card.title} drone`}
-                  className="w-full h-full object-cover"
-                />
+                {/* Use Next.js Image for optimized loading */}
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Images/drone.jpg"
+                    alt={`${card.title} drone`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
               {/* Bottom content (55%) */}
