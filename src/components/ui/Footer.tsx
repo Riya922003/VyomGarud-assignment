@@ -68,22 +68,21 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 4: Floating Dock (centered) */}
-          <div className="md:col-span-1 flex items-center justify-center">
-            {/* Build a small items array for the dock */}
-            <FloatingDock
-              desktopClassName="mx-auto"
-              mobileClassName="translate-y-0"
-              items={[
-                { title: "Home", icon: <IconHome className="h-full w-full text-neutral-500" />, href: "#" },
-                { title: "Products", icon: <IconTerminal2 className="h-full w-full text-neutral-500" />, href: "#" },
-                { title: "Docs", icon: <IconNewSection className="h-full w-full text-neutral-500" />, href: "#" },
-                { title: "Changelog", icon: <IconExchange className="h-full w-full text-neutral-500" />, href: "#" },
-                { title: "X", icon: <IconBrandX className="h-full w-full text-neutral-500" />, href: "#" },
-                { title: "GitHub", icon: <IconBrandGithub className="h-full w-full text-neutral-500" />, href: "#" },
-              ]}
-            />
-          </div>
+        </div>
+        {/* Floating dock centered full-width row so it never gets clipped in narrow columns */}
+        <div className="mt-6 flex w-full justify-center">
+          <FloatingDock
+            desktopClassName="mx-auto max-w-full px-4"
+            mobileClassName="translate-y-0"
+            items={[
+              { title: "Home", icon: <IconHome className="h-full w-full text-neutral-500" />, href: "#" },
+              { title: "Products", icon: <IconTerminal2 className="h-full w-full text-neutral-500" />, href: "#" },
+              { title: "Docs", icon: <IconNewSection className="h-full w-full text-neutral-500" />, href: "#" },
+              { title: "Changelog", icon: <IconExchange className="h-full w-full text-neutral-500" />, href: "#" },
+              { title: "X", icon: <IconBrandX className="h-full w-full text-neutral-500" />, href: "#" },
+              { title: "GitHub", icon: <IconBrandGithub className="h-full w-full text-neutral-500" />, href: "#" },
+            ]}
+          />
         </div>
       </div>
 
