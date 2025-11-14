@@ -6,11 +6,14 @@ export const BackgroundRippleEffect = ({
   rows = 8,
   cols = 27,
   cellSize = 56,
+  className = "",
+  ...rest
 }: {
   rows?: number;
   cols?: number;
   cellSize?: number;
-}) => {
+  className?: string;
+} & React.HTMLAttributes<HTMLDivElement>) => {
   const [clickedCell, setClickedCell] = useState<{
     row: number;
     col: number;
@@ -25,7 +28,9 @@ export const BackgroundRippleEffect = ({
         "absolute inset-0 h-full w-full",
         "[--cell-border-color:var(--color-neutral-300)] [--cell-fill-color:var(--color-neutral-100)] [--cell-shadow-color:var(--color-neutral-500)]",
         "dark:[--cell-border-color:var(--color-neutral-700)] dark:[--cell-fill-color:var(--color-neutral-900)] dark:[--cell-shadow-color:var(--color-neutral-800)]",
+        className,
       )}
+      {...rest}
     >
       <div className="relative h-auto w-auto overflow-hidden">
         <div className="pointer-events-none absolute inset-0 z-[2] h-full w-full overflow-hidden" />
@@ -122,9 +127,8 @@ const DivGrid = ({
               borderColor: borderColor,
               ...style,
             }}
-            onClick={
-              interactive ? () => onCellClick?.(rowIdx, colIdx) : undefined
-            }
+            onClick={interactive ? () => onCellClick?.(rowIdx, colIdx) : undefined}
+            onMouseEnter={interactive ? () => onCellClick?.(rowIdx, colIdx) : undefined}
           />
         );
       })}

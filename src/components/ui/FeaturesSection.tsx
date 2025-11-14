@@ -43,7 +43,7 @@ export const FeaturesSection = ({ className }: { className?: string }) => {
     <section className={cn("w-full bg-neutral-900 py-20 px-4", className)}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Featured Systems
+            Our ProductsThe class `bg-gradient-to-t` can be written as `bg-linear-to-t`
         </h2>
         <p className="text-neutral-400 mb-10 max-w-2xl">
           Advanced UAV platforms designed for resilient, mission-critical payload delivery and autonomous operations.
@@ -55,8 +55,12 @@ export const FeaturesSection = ({ className }: { className?: string }) => {
             <CardSpotlight key={card.id} className="h-[520px] flex flex-col rounded-xl overflow-hidden">
               {/* Top image area (45%) */}
               <div className="h-[45%] rounded-md overflow-hidden bg-linear-to-tr from-neutral-800 via-neutral-900 to-black flex items-center justify-center">
-                {/* Placeholder image — replace with actual <img/> when content is available */}
-                <div className="text-neutral-400">Image</div>
+                {/* Use the provided drone.jpg from public/Images */}
+                <img
+                  src="/Images/drone.jpg"
+                  alt={`${card.title} drone`}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Bottom content (55%) */}

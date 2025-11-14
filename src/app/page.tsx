@@ -7,6 +7,8 @@ import { AboutSection } from '@/components/ui/AboutSection';
 import { LogoTicker } from '@/components/ui/LogoTicker';
 import { FeaturesSection } from '@/components/ui/FeaturesSection';
 import { HighlightsSection } from '@/components/ui/HighlightsSection';
+import { ContactSection } from '@/components/ui/ContactSection';
+import Footer from '@/components/ui/Footer';
 
 function HeroSection() {
   return (
@@ -73,6 +75,8 @@ export default function Home() {
   <AboutSection />
   <FeaturesSection />
   <HighlightsSection />
+  <ContactSection />
+  <Footer />
       {/* Other sections will go below */}
     </main>
   );

@@ -21,6 +21,7 @@ export const HighlightsSection: React.FC = () => {
 	return (
 			<section aria-labelledby="highlights" className="py-12 bg-black">
 				<div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 text-white">
+					<h2 id="highlights" className="text-2xl md:text-3xl font-bold mb-6">CORE SYSTEM CAPABILITIES</h2>
 							<div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] md:grid-rows-2 gap-6">
 								{/* Top-left: wide (left, spans 2 columns at md+) */}
 								<div
@@ -28,8 +29,8 @@ export const HighlightsSection: React.FC = () => {
 									style={{ backgroundImage: `url('${thumbnail}')`, minHeight: '12rem' }}
 								>
 									{/* ripple background effect sits behind content */}
-									<BackgroundRippleEffect className="absolute inset-0 z-0 pointer-events-none" />
-									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+									<BackgroundRippleEffect className="absolute inset-0 z-0" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 									<div className="p-6 relative z-10">
 										<h3 className="text-lg font-bold mb-2">AI AUTONOMOUS ROUTING</h3>
 										<p className="text-neutral-300">On-board AI platform (&quot;Aegis OS&quot;) manages real-time flight paths, obstacle avoidance, and dynamic fleet coordination for safe and efficient delivery.</p>
@@ -41,7 +42,7 @@ export const HighlightsSection: React.FC = () => {
 									className="md:col-start-3 md:row-start-1 rounded-xl overflow-hidden relative bg-cover bg-center bg-neutral-900 bg-blend-overlay shadow-lg ring-1 ring-white/5"
 									style={{ backgroundImage: `url('${thumbnail}')`, minHeight: '12rem' }}
 								>
-									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 									<div className="p-6 relative z-10">
 										<h3 className="text-lg font-bold mb-2">ALL-WEATHER OPERATIONS</h3>
 										<p className="text-neutral-300">IP67-rated airframes and redundant propulsion systems ensure mission-critical reliability in high winds, rain, and adverse weather conditions.</p>
@@ -53,7 +54,7 @@ export const HighlightsSection: React.FC = () => {
 									className="md:col-start-1 md:row-start-2 rounded-xl overflow-hidden relative bg-cover bg-center bg-neutral-900 bg-blend-overlay shadow-lg ring-1 ring-white/5"
 									style={{ backgroundImage: `url('${thumbnail}')`, minHeight: '10rem' }}
 								>
-									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 									<div className="p-6 relative z-10">
 										<h3 className="text-lg font-bold mb-2">COLD-CHAIN INTEGRITY</h3>
 										<p className="text-neutral-300">Active, on-board refrigeration and 24/7 temperature monitoring guarantee the viability of sensitive medical payloads like vaccines and biologics from pickup to drop-off.</p>
@@ -66,8 +67,8 @@ export const HighlightsSection: React.FC = () => {
 												style={{ backgroundImage: `url('${thumbnail}')`, minHeight: '12rem' }}
 											>
 												{/* ripple background effect for this card */}
-												<BackgroundRippleEffect className="absolute inset-0 z-0 pointer-events-none" />
-												<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+												<BackgroundRippleEffect className="absolute inset-0 z-0" />
+												<div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 												<div className="p-6 relative z-10">
 													<h3 className="text-lg font-bold mb-2">ENCRYPTED COMMUNICATION LINK</h3>
 													<p className="text-neutral-300">Secure, military-grade data links prevent signal jamming or hijacking, ensuring your critical payload and flight data are always protected.</p>
